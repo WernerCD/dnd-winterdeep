@@ -190,7 +190,7 @@ def world(name):
     t = read(f"world/{name}.md")
     t = re.sub(r"^# .*\n", "", t)
     t = re.sub(r"^Citations as in.*$|^Citations: .*$", "", t, flags=re.M)
-    t = re.sub(r"`(npcs|factions)\.md`", r"the  tab", t).replace("`sessions/`", "the Sessions tab")
+    t = re.sub(r"`(npcs|factions)\.md`", lambda m: "the " + {"npcs": "NPCs", "factions": "Factions"}[m.group(1)] + " tab", t).replace("`sessions/`", "the Sessions tab")
     return md(clean(t, keep_head=True))
 worldd = {k: world(k) for k in ("overview", "diary", "legend", "factions", "npcs", "places", "items", "lore")}
 
