@@ -193,6 +193,8 @@ def world(name):
     t = re.sub(r"`(npcs|factions)\.md`", lambda m: "the " + {"npcs": "NPCs", "factions": "Factions"}[m.group(1)] + " tab", t).replace("`sessions/`", "the Sessions tab")
     return md(clean(t, keep_head=True))
 worldd = {k: world(k) for k in ("overview", "diary", "legend", "factions", "npcs", "places", "items", "lore")}
+# Sketch map (original drawing, kept in the notes as world/map.svg) is inlined so it follows the site theme.
+worldd["map"] = re.sub(r"<!--.*?-->\s*", "", read("world/map.svg"), flags=re.S).strip()
 
 # ---- sessions ------------------------------------------------------------
 sess = []

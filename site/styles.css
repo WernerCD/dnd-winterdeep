@@ -90,7 +90,7 @@ a { color: var(--accent); }
 .prose blockquote { margin: 10px 0; padding: 8px 12px; border-left: 3px solid var(--gold); background: var(--surface-2); border-radius: 0 8px 8px 0; color: var(--ink-2); }
 .prose code { background: var(--surface-2); border-radius: 4px; padding: 0 4px; font-size: .9em; }
 .lede { color: var(--ink-2); }
-.cite { font-size: .8rem; color: var(--muted); white-space: nowrap; }
+.cite { font-size: .8rem; color: var(--muted); }
 .cite a { color: var(--muted); }
 .cite a:hover { color: var(--accent); }
 .prose a[href^="#s-"] { white-space: nowrap; }
@@ -122,6 +122,39 @@ td { color: var(--ink-2); min-width: 9ch; }
   .sess > summary { grid-template-columns: auto 1fr; }
   .sess .pill { grid-column: 2; }
 }
+
+/* Places: sketch map (inline SVG, follows the theme) */
+.map-fig { margin: 4px 0 18px; }
+.map-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.wd-map { display: block; width: 100%; min-width: 560px; height: auto; font-family: inherit; }
+.wd-map .land { fill: var(--surface-2); }
+.wd-map .sea { fill: color-mix(in srgb, #3b7ea1 24%, var(--surface)); }
+.wd-map .coast { fill: none; stroke: color-mix(in srgb, #3b7ea1 55%, var(--ink-2)); stroke-width: 2; }
+.wd-map .sea-label { fill: color-mix(in srgb, #3b7ea1 60%, var(--ink-2)); font-size: 18px; letter-spacing: .4em; font-style: italic; }
+.wd-map .title { fill: var(--ink); font-size: 28px; font-weight: 700; }
+.wd-map .note, .wd-map .lbl { fill: var(--ink-2); font-size: 13px; }
+.wd-map .lbl.b { fill: var(--ink); font-size: 14px; font-weight: 700; }
+.wd-map .lbl.s { font-size: 12.5px; }
+.wd-map .i { font-style: italic; }
+.wd-map .mtn path { fill: var(--muted); opacity: .55; }
+.wd-map .mtn .snow { fill: var(--surface); opacity: 1; }
+.wd-map .wall { fill: var(--surface); stroke: var(--ink-2); stroke-width: 3; stroke-linejoin: round; }
+.wd-map .ward path { fill: none; stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.wd-map .ward-lbl { fill: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .12em; }
+.wd-map .road { fill: none; stroke: var(--gold); stroke-width: 2; stroke-dasharray: 2 5; stroke-linecap: round; }
+.wd-map .pin { fill: var(--accent); stroke: var(--surface); stroke-width: 1.5; }
+.wd-map .star { fill: var(--gold); stroke: var(--ink); stroke-width: 1; }
+.wd-map .gate { fill: var(--ink-2); }
+.wd-map .lighthouse rect, .wd-map .lighthouse path { fill: var(--warn); }
+.wd-map .beach path { fill: none; stroke: var(--gold); stroke-width: 5; stroke-linecap: round; opacity: .7; }
+.wd-map .palm circle { fill: var(--accent); }
+.wd-map .field rect { fill: color-mix(in srgb, var(--gold) 28%, var(--surface-2)); stroke: var(--line); }
+.wd-map .swamp path { fill: none; stroke: var(--accent); stroke-width: 2; opacity: .7; }
+.wd-map .tree path { fill: var(--accent); opacity: .75; }
+.wd-map .box { fill: var(--surface); stroke: var(--line); }
+.wd-map .compass path { fill: var(--ink-2); }
+.wd-map .compass text { fill: var(--ink-2); font-size: 14px; font-weight: 700; }
+.map-fig figcaption { color: var(--muted); font-size: .9rem; margin-top: 6px; }
 
 /* === dnd-shared v1.1 (canonical copy: WernerCD/dnd shared/dnd-shared.css) === */
 /* Paste this block unchanged at the END of each site's styles.css. Do not edit it per site;

@@ -21,7 +21,10 @@
     sessions: sessionsHTML,
     party: function () { return D.party; },
     npcs: function () { return D.world.npcs; },
-    places: function () { return D.world.places; },
+    places: function () {
+      return (D.world.map ? '<figure class="map-fig"><div class="map-scroll">' + D.world.map + '</div>' +
+        '<figcaption>A players’ sketch of the places in the notes, not the DM’s map and not to scale.</figcaption></figure>' : '') + D.world.places;
+    },
     factions: function () { return D.world.factions; },
     items: function () { return D.world.items; },
     lore: function () { return D.world.lore; },
