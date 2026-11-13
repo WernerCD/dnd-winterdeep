@@ -1,0 +1,160 @@
+:root {
+  --src-s: 58%; --src-l: 40%; --src-bg: 94%;
+  --bg: #f6f3ec;
+  --surface: #fffdf8;
+  --surface-2: #efeadf;
+  --ink: #1f2a24;
+  --ink-2: #4d5a52;
+  --muted: #6f7a72;
+  --line: #ddd5c4;
+  --accent: #2f6b4f;
+  --accent-ink: #ffffff;
+  --gold: #a8841c;
+  --warn: #9a4b1c;
+  --warn-bg: #f7e6d8;
+  --chip: #e6efe9;
+  --shadow: 0 1px 2px rgba(31, 42, 36, .06), 0 4px 16px rgba(31, 42, 36, .06);
+  --radius: 12px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12171a;
+    --surface: #1a2125;
+    --surface-2: #222b30;
+    --ink: #e8ece6;
+    --ink-2: #b9c3bc;
+    --muted: #8d9a93;
+    --line: #2f3a3f;
+    --accent: #6fbf95;
+    --accent-ink: #0d1a13;
+    --gold: #d9b84a;
+    --warn: #f0a878;
+    --warn-bg: #3a2a20;
+    --chip: #233229;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 16px rgba(0, 0, 0, .25);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12171a;
+  --surface: #1a2125;
+  --surface-2: #222b30;
+  --ink: #e8ece6;
+  --ink-2: #b9c3bc;
+  --muted: #8d9a93;
+  --line: #2f3a3f;
+  --accent: #6fbf95;
+  --accent-ink: #0d1a13;
+  --gold: #d9b84a;
+  --warn: #f0a878;
+  --warn-bg: #3a2a20;
+  --chip: #233229;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 16px rgba(0, 0, 0, .25);
+  color-scheme: dark;
+}
+
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 12px; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 Inter, system-ui, sans-serif; }
+h1, h2, h3, h4 { font-family: Fraunces, Georgia, serif; line-height: 1.2; margin: 0; }
+a { color: var(--accent); }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+.icon-btn { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 10px; width: 40px; height: 40px; display: grid; place-items: center; cursor: pointer; flex: none; }
+.icon-btn svg { width: 20px; height: 20px; fill: currentColor; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* tabs + search */
+.bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: 22px 0 6px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; flex: 1 1 520px; }
+.tabs button { font: 500 .9rem Inter, system-ui, sans-serif; color: var(--ink-2); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 13px; cursor: pointer; }
+.tabs button:hover { border-color: var(--accent); color: var(--ink); }
+.tabs button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.search { flex: 1 1 220px; max-width: 320px; }
+.search input { width: 100%; font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
+.search input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.asof { color: var(--muted); font-size: .88rem; margin: 4px 0 10px; }
+.nohits { color: var(--muted); font-style: italic; }
+
+/* content */
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 6px 22px 18px; min-width: 0; overflow-wrap: anywhere; }
+.prose h2 { font-size: 1.4rem; margin: 22px 0 8px; }
+.prose h3 { font-size: 1.12rem; margin: 18px 0 6px; }
+.prose h4, .prose h5 { font-size: 1rem; margin: 14px 0 4px; }
+.prose p, .prose li { color: var(--ink-2); }
+.prose b { color: var(--ink); }
+.prose ul, .prose ol { padding-left: 20px; margin: 6px 0; }
+.prose li { margin: 3px 0; }
+.prose blockquote { margin: 10px 0; padding: 8px 12px; border-left: 3px solid var(--gold); background: var(--surface-2); border-radius: 0 8px 8px 0; color: var(--ink-2); }
+.prose code { background: var(--surface-2); border-radius: 4px; padding: 0 4px; font-size: .9em; }
+.lede { color: var(--ink-2); }
+.cite { font-size: .8rem; color: var(--muted); white-space: nowrap; }
+.cite a { color: var(--muted); }
+.cite a:hover { color: var(--accent); }
+.prose a[href^="#s-"] { white-space: nowrap; }
+.tbl { overflow-x: auto; margin: 10px 0; border: 1px solid var(--line); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+th, td { text-align: left; vertical-align: top; padding: 7px 10px; border-bottom: 1px solid var(--line); }
+th { background: var(--surface-2); font-weight: 600; color: var(--ink); position: sticky; top: 0; }
+tbody tr:last-child td { border-bottom: 0; }
+td { color: var(--ink-2); min-width: 9ch; }
+
+/* sessions */
+.sess { border: 1px solid var(--line); border-radius: 10px; margin: 8px 0; background: var(--bg); }
+.sess.full { border-color: var(--gold); }
+.sess.empty { opacity: .65; }
+.sess > summary { cursor: pointer; padding: 10px 14px; display: grid; grid-template-columns: auto auto 1fr; gap: 4px 10px; align-items: baseline; list-style: none; }
+.sess > summary::-webkit-details-marker { display: none; }
+.sess > summary::before { content: "\25B8"; color: var(--muted); grid-row: 1; }
+.sess[open] > summary::before { content: "\25BE"; }
+.sess .date { font-weight: 600; color: var(--ink); white-space: nowrap; }
+.sess .pill { font-size: .72rem; font-weight: 600; color: var(--gold); border: 1px solid var(--gold); border-radius: 999px; padding: 0 8px; justify-self: start; }
+.sess .sum { grid-column: 1 / -1; color: var(--ink-2); font-size: .93rem; }
+.sess .body { padding: 0 16px 12px; border-top: 1px dashed var(--line); }
+.about { margin: 28px 0 0; color: var(--ink-2); }
+.about > * { max-width: 780px; }
+.about h2 { font-size: 1.3rem; margin-bottom: 6px; }
+@media (max-width: 560px) {
+  .panel { padding: 4px 14px 14px; }
+  .search { max-width: none; }
+  .sess > summary { grid-template-columns: auto 1fr; }
+  .sess .pill { grid-column: 2; }
+}
+
+/* === dnd-shared v1.1 (canonical copy: WernerCD/dnd shared/dnd-shared.css) === */
+/* Paste this block unchanged at the END of each site's styles.css. Do not edit it per site;
+   change it in the hub repo and re-copy it to every site. It relies on the shared tokens
+   (--bg, --surface, --surface-2, --ink, --ink-2, --muted, --line, --accent, --gold, --radius). */
+.site-header { background: var(--surface); border-bottom: 1px solid var(--line); }
+.hub-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 10px; font-size: .85rem; }
+.hub-bar a { color: var(--muted); font-weight: 500; text-decoration: none; border-radius: 6px; }
+.hub-bar a:hover, .hub-bar a:focus-visible { color: var(--accent); text-decoration: underline; }
+.hub-bar a[aria-current="page"] { color: var(--ink); }
+.hub-nav { display: flex; gap: 14px; }
+.hub-bar + .header-inner { padding-top: 8px; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 18px; padding-bottom: 18px; }
+.brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.brand .logo { width: 40px; height: 40px; fill: var(--gold); flex: none; }
+.brand h1 { font-size: clamp(1.4rem, 3.5vw, 2rem); }
+.brand h1 a { color: inherit; text-decoration: none; }
+.tagline { margin: 2px 0 0; color: var(--muted); font-size: .92rem; }
+
+.site-footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 20px 0 36px; color: var(--muted); font-size: .86rem; }
+.site-footer .foot-links { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 0 0 10px; padding: 0; list-style: none; }
+.site-footer .foot-links a { color: var(--ink-2); }
+.site-footer .foot-links a[aria-current="page"] { color: var(--ink); font-weight: 600; text-decoration: none; }
+.site-footer p { margin: 6px 0; max-width: 80ch; }
+
+.changes { padding-bottom: 8px; }
+.changes > * { max-width: 780px; }
+.changes h2 { font-size: 1.6rem; margin: 28px 0 4px; }
+.changes .intro { color: var(--ink-2); margin: 0 0 8px; }
+.change-day { margin: 22px 0 0; }
+.change-day h3 { font-family: Inter, system-ui, sans-serif; font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--line); padding-bottom: 4px; margin: 0 0 8px; }
+.change-day ul { margin: 0; padding-left: 18px; }
+.change-day li { margin: 6px 0; color: var(--ink-2); line-height: 1.5; }
+.change-day li b { color: var(--ink); }
+@media (max-width: 480px) { .hub-nav { gap: 10px; } .tagline { font-size: .85rem; } }
+/* === end dnd-shared v1.1 === */

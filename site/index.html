@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Winterdeep Campaign</title>
+<meta name="description" content="Campaign journal for Winterdeep, a D&D 5e home game: where the party is, quests, sessions, NPCs, places and loot.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M14.70 2.00L17.30 2.00L17.30 30.00L14.70 30.00ZM27.47 7.87L28.77 10.13L4.53 24.13L3.23 21.87ZM28.77 21.87L27.47 24.13L3.23 10.13L4.53 7.87ZM11.19 4.25L12.75 2.69L17.13 7.08L15.58 8.63ZM19.25 2.69L20.81 4.25L16.42 8.63L14.87 7.08ZM23.77 5.96L25.90 6.53L24.29 12.52L22.17 11.95ZM29.15 12.16L28.58 14.29L22.59 12.68L23.16 10.56ZM28.58 17.71L29.15 19.84L23.16 21.44L22.59 19.32ZM25.90 25.47L23.77 26.04L22.17 20.05L24.29 19.48ZM20.81 27.75L19.25 29.31L14.87 24.92L16.42 23.37ZM12.75 29.31L11.19 27.75L15.58 23.37L17.13 24.92ZM8.23 26.04L6.10 25.47L7.71 19.48L9.83 20.05ZM2.85 19.84L3.42 17.71L9.41 19.32L8.84 21.44ZM3.42 14.29L2.85 12.16L8.84 10.56L9.41 12.68ZM6.10 6.53L8.23 5.96L9.83 11.95L7.71 12.52Z' fill='%23c9a227'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem('dnd.theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;}catch(e){}</script>
+<link rel="stylesheet" href="styles.css?v=dev">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap hub-bar">
+    <a href="https://wernercd.github.io/dnd/">&larr; D&amp;D Toolbox</a>
+    <nav class="hub-nav" aria-label="Site">
+      <a href="./" aria-current="page">Tool</a>
+      <a href="changes.html">Changes</a>
+    </nav>
+  </div>
+  <div class="wrap header-inner">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><path d="M14.70 2.00L17.30 2.00L17.30 30.00L14.70 30.00ZM27.47 7.87L28.77 10.13L4.53 24.13L3.23 21.87ZM28.77 21.87L27.47 24.13L3.23 10.13L4.53 7.87ZM11.19 4.25L12.75 2.69L17.13 7.08L15.58 8.63ZM19.25 2.69L20.81 4.25L16.42 8.63L14.87 7.08ZM23.77 5.96L25.90 6.53L24.29 12.52L22.17 11.95ZM29.15 12.16L28.58 14.29L22.59 12.68L23.16 10.56ZM28.58 17.71L29.15 19.84L23.16 21.44L22.59 19.32ZM25.90 25.47L23.77 26.04L22.17 20.05L24.29 19.48ZM20.81 27.75L19.25 29.31L14.87 24.92L16.42 23.37ZM12.75 29.31L11.19 27.75L15.58 23.37L17.13 24.92ZM8.23 26.04L6.10 25.47L7.71 19.48L9.83 20.05ZM2.85 19.84L3.42 17.71L9.41 19.32L8.84 21.44ZM3.42 14.29L2.85 12.16L8.84 10.56L9.41 12.68ZM6.10 6.53L8.23 5.96L9.83 11.95L7.71 12.52Z"/></svg>
+      <div>
+        <h1>Winterdeep Campaign</h1>
+        <p class="tagline">Our Thursday game: where we are, who we've met, what we've found</p>
+      </div>
+    </div>
+    <button id="themeBtn" class="icon-btn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="bar">
+    <nav class="tabs" role="tablist" aria-label="Sections">
+      <button role="tab" data-tab="overview">World</button>
+      <button role="tab" data-tab="now">Now</button>
+      <button role="tab" data-tab="diary">Diary</button>
+      <button role="tab" data-tab="legend">Legend</button>
+      <button role="tab" data-tab="sessions">Sessions</button>
+      <button role="tab" data-tab="party">Party</button>
+      <button role="tab" data-tab="npcs">NPCs</button>
+      <button role="tab" data-tab="places">Places</button>
+      <button role="tab" data-tab="factions">Factions</button>
+      <button role="tab" data-tab="items">Items</button>
+      <button role="tab" data-tab="lore">Lore</button>
+      <button role="tab" data-tab="timeline">Timeline</button>
+    </nav>
+    <label class="search"><span class="sr">Search</span>
+      <input id="q" type="search" placeholder="Search this tab…" autocomplete="off">
+    </label>
+  </div>
+  <p id="asof" class="asof"></p>
+  <section id="panel" class="panel prose" role="tabpanel" aria-live="polite"></section>
+  <p id="nohits" class="nohits" hidden>Nothing matches that search on this tab.</p>
+
+  <section class="about" id="about">
+    <h2>About</h2>
+    <p>A players' journal for the Winterdeep campaign, built from our session notes and recordings. Bracketed links like <span class="cite">[notes 2025-10-16]</span> point to the session a fact comes from; <i>(uncertain)</i> marks a guess. Some names are spelled the way they sounded at the table. <a href="changes.html">See what's changed</a>.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <ul class="foot-links">
+      <li><a href="https://wernercd.github.io/dnd/">D&amp;D Toolbox</a></li>
+      <li><a href="https://wernercd.github.io/dnd-druid-wildshapes/">Wild Shape Beast List</a></li>
+      <li><a href="https://wernercd.github.io/dnd-items/">Item Finder</a></li>
+      <li><a href="https://wernercd.github.io/dnd-multiclass-planner/">Multiclass Planner</a></li>
+      <li><a href="changes.html">Changes</a></li>
+      <li><a href="https://github.com/WernerCD/dnd-winterdeep" rel="noopener">Source code</a></li>
+      <li><a href="https://github.com/WernerCD/dnd-winterdeep/issues" rel="noopener">Report a problem</a></li>
+    </ul>
+    <p>Unofficial fan content, not affiliated with or endorsed by Wizards of the Coast. Rules text comes from the System Reference Documents 5.1 and 5.2 by Wizards of the Coast LLC, licensed under <a href="https://creativecommons.org/licenses/by/4.0/legalcode" rel="noopener">CC BY 4.0</a>.</p>
+  </div>
+</footer>
+<script src="data.js?v=dev"></script>
+<script src="app.js?v=dev"></script>
+<script src="theme.js?v=dev"></script>
+<script src="version.js?v=dev"></script>
+</body>
+</html>
