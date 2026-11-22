@@ -6,7 +6,7 @@
   document.getElementById('asof').textContent = 'Campaign state as of ' + D.asof + '.';
 
   function sessionsHTML() {
-    return '<p class="lede">' + D.sessions.length + ' sessions, newest first. The four latest have full write-ups from the recordings; older ones come from the players’ notes.</p>' +
+    return '<p class="lede">' + D.sessions.length + ' sessions, newest first. The ' + D.sessions.filter(function (s) { return s.full; }).length + ' latest have full write-ups from the recordings; older ones come from the players’ notes.</p>' +
       D.sessions.map(function (s) {
         return '<details class="sess' + (s.full ? ' full' : '') + (s.empty ? ' empty' : '') + '" id="s-' + s.d + '">' +
           '<summary><span class="date">' + s.day + ' ' + s.d + '</span>' + (s.full ? '<span class="pill">Full recap</span>' : '') +
